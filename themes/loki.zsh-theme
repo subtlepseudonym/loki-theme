@@ -14,10 +14,10 @@ git_ahead_c="$FG[001]"
 git_clean_c="$FG[064]"
 git_dirty_c="$FG[001]"
 
-ZSH_THEME_GIT_PROMPT_PREFIX="${git_branch_c}" #"$LOKI_GIT_BRANCH_COLOR"
+ZSH_THEME_GIT_PROMPT_PREFIX="${git_branch_c}"
 ZSH_THEME_GIT_PROMPT_SUFFIX=""
-ZSH_THEME_GIT_PROMPT_CLEAN=" ${git_clean_c}✓" #" $LOKI_GIT_CLEAN_COLOR✓"
-ZSH_THEME_GIT_PROMPT_DIRTY=" ${git_dirty_c}✗" #" $LOKI_GIT_DIRTY_COLOR✗"
+ZSH_THEME_GIT_PROMPT_CLEAN=" ${git_clean_c}✔"
+ZSH_THEME_GIT_PROMPT_DIRTY=" ${git_dirty_c}✗"
 
 time_="${brace_c}"["${time_c}%t${brace_c}"]"%{$reset_color%}"
 user_host_dir_="${brace_c}"["${userhost_c}%n@%m%{$reset_color%}:${dir_c}%~${brace_c}"]"%{$reset_color%}"
