@@ -6,6 +6,11 @@ This theme is designed to make keeping track of git project versions / progress 
 
 Put the contents of this repo into your oh-my-zsh custom folder. The default path for this directory is ${HOME}/.oh-my-zsh/custom
 
-You may need to change the colors of your terminal around to make it more palatable because my home setup (for which this was created) has some odd color settings. You can find my color settings for urxvt and xterm in <a href="https://github.com/subtlepseudonym/custom-envs/tree/master/Xresources/.Xresources.d">custom-envs</a>, which may help.
+There are three theme files in the themes/ directory:
++ loki.zsh-theme  (for 256 color terminals)
++ loki8.zsh-theme (for 8 color terminals)
++ loki-old.zsh-theme (the old v1.0.0 theme which had color issues)
+
+If you decide to use loki-old, you may need to change the colors of your terminal around to make it more palatable because my home setup (for which this was created) has some odd color settings. You can find my color settings for urxvt and xterm in <a href="https://github.com/subtlepseudonym/custom-envs/tree/master/Xresources/.Xresources.d">custom-envs</a>, which may help.
 
 Enjoy
