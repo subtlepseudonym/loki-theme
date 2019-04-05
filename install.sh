@@ -1,3 +1,4 @@
 #!/bin/bash
 
-cp `find . -name "*\.zsh*"` ${HOME}/.oh-my-zsh/custom/
+dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+cp `find "${dir}" -name "*\.zsh*"` "${HOME}/.oh-my-zsh/custom/"
