@@ -17,8 +17,12 @@ PROMPT_GIT_DIRTY="${red_c}✗"
 PROMPT_GIT_CLEAN="${green_c}✔"
 setopt PROMPT_SUBST
 
+function git_ () {
+	git_is_repo || \
+	echo " ${green_c}$(git_current_branch) $(git_working_tree_status) ${yellow_c}$(git_current_tag) ${red_c}$(git_commits_ahead_of_tag)%{$reset_c%}"
+}
+
 time_="${blue_c}"["${green_c}%t${blue_c}"]"%{$reset_c%}"
 user_host_dir_="${blue_c}"["${light_blue_c}%n@%m%{$reset_c%}:${light_green_c}%~${blue_c}"]"%{$reset_c%}"
-git_=" ${green_c}\$(git_current_branch) \$(git_working_tree_status) ${yellow_c}\$(git_current_tag) ${red_c}\$(git_commits_ahead_of_tag)%{$reset_c%}"
-PROMPT="${time_} ${user_host_dir_}${git_}
+PROMPT="${time_} ${user_host_dir_}\$(git_)
 $ "

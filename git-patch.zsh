@@ -1,3 +1,13 @@
+# Returns 0 when not in a git repo, 1 otherwise
+function git_is_repo() {
+	local ref
+	ref=$(command git symbolic-ref HEAD 2> /dev/null) || \
+	ref=$(command git rev-parse --short HEAD 2> /dev/null) || \
+	return 0
+
+	return 1
+}
+
 # Outputs the name of the current branch
 #
 # Copied with minor modification from
@@ -17,11 +27,6 @@ function git_current_branch() {
 # Checks whether working tree is dirty and outputs apropriate
 # prompt variable
 function git_working_tree_status() {
-	local ref
-	ref=$(command git symbolic-ref HEAD 2> /dev/null) || \
-		ref=$(command git rev-parse --short HEAD 2> /dev/null) || \
-		return
-
 	local changes
 	changes=$(command git status --porcelain 2> /dev/null | tail -n1)
 	if [[ -n $changes ]]; then
