@@ -2,6 +2,7 @@
 
 # colors referenced below (denoted by _c suffix) can be looked up here:
 #  https://misc.flogisoft.com/bash/tip_colors_and_formatting
+#  https://upload.wikimedia.org/wikipedia/commons/1/15/Xterm_256color_chart.svg
 
 reset_c="%f"
 
