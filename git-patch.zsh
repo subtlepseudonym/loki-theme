@@ -2,7 +2,7 @@
 function git_is_repo() {
 	$(command git symbolic-ref HEAD 2> /dev/null) || \
 	$(command git rev-parse --short HEAD 2> /dev/null) || \
-	return 1
+	return 0
 }
 
 # Outputs the name of the current branch
@@ -23,10 +23,10 @@ function git_current_branch() {
 
 # Checks whether working tree is dirty and outputs apropriate
 # prompt variable
-func git_working_tree_status() {
-	local status
-	status=$(command git status --porcelain 2> /dev/null | tail -n1)
-	if [ -n $status ]; then
+function git_working_tree_status() {
+	local changes
+	changes=$(command git status --porcelain 2> /dev/null | tail -n1)
+	if [ -n $changes ]; then
 		echo "${PROMPT_GIT_DIRTY}"
 	else
 		echo "${PROMPT_GIT_CLEAN}"
