@@ -1,10 +1,11 @@
 #!/bin/bash
 
-dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+dir="$(dirname $0)"
+
 if [ -d "${HOME}/.oh-my-zsh" ]; then
 	cp `find "${dir}" -name "*\.zsh"` "${HOME}/.oh-my-zsh/custom/"
 	cp `find "${dir}" -name "*\.zsh-theme"` "${HOME}/.oh-my-zsh/custom/themes"
-elif [ ! -z "${DOTFILES}" ]; then
+elif [ ! -d "${ZSH}" -o ! -z "${DOTFILES}" -a -d "${DOTFILES}/themes" ]; then
 	cp `find "${dir}" -name "*\.zsh"` "${ZSH}"
 	cp `find "${dir}" -name "*\.zsh-theme"` "${DOTFILES}/themes"
 else
