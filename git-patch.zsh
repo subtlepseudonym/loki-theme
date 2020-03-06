@@ -24,7 +24,7 @@ function git_working_tree_status() {
 
 	local changes
 	changes=$(command git status --porcelain 2> /dev/null | tail -n1)
-	if [ -n $changes ]; then
+	if [[ -n $changes ]]; then
 		echo "${PROMPT_GIT_DIRTY}"
 	else
 		echo "${PROMPT_GIT_CLEAN}"
