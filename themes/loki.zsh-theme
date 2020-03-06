@@ -3,14 +3,14 @@
 # colors referenced below (denoted by _c suffix) can be looked up here:
 #  https://misc.flogisoft.com/bash/tip_colors_and_formatting
 
-reset_c="\e[0m"
+reset_c="%f"
 
-red_c="$FG{001}"
-green_c="$FG{064}"
-yellow_c="$FG{178}"
-blue_c="$FG{012}"
-light_blue_c="$FG{074}"
-light_green_c="$FG{107}"
+red_c="%F{001}"
+green_c="%F{064}"
+yellow_c="%F{178}"
+blue_c="%F{012}"
+light_blue_c="%F{074}"
+light_green_c="%F{107}"
 
 PROMPT_GIT_DIRTY="${red_c}✗"
 PROMPT_GIT_CLEAN="${green_c}✔"
