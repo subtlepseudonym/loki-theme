@@ -20,7 +20,7 @@ function git_working_tree_status() {
 	local ref
 	ref=$(command git symbolic-ref HEAD 2> /dev/null) || \
 		ref=$(command git rev-parse --short HEAD 2> /dev/null) || \
-		return 0
+		return
 
 	local changes
 	changes=$(command git status --porcelain 2> /dev/null | tail -n1)
