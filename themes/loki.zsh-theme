@@ -4,23 +4,19 @@
 #  https://misc.flogisoft.com/bash/tip_colors_and_formatting
 
 reset_c="\e[0m"
-brace_c="$FG[012]"
-time_c="$FG[064]"
-userhost_c="$FG[074]"
-dir_c="$FG[107]"
-git_branch_c="$FG[064]"
-git_tag_c="$FG[178]"
-git_ahead_c="$FG[001]"
-git_clean_c="$FG[064]"
-git_dirty_c="$FG[001]"
 
-ZSH_THEME_GIT_PROMPT_PREFIX="${git_branch_c}"
-ZSH_THEME_GIT_PROMPT_SUFFIX=""
-ZSH_THEME_GIT_PROMPT_CLEAN=" ${git_clean_c}✔"
-ZSH_THEME_GIT_PROMPT_DIRTY=" ${git_dirty_c}✗"
+blue_c="${FG[012]}"
+green_c="${FG[064]}"
+yellow_c="${FG[178]}"
+red_c="${FG[001]}"
+light_blue_c="${FG[074]}"
+light_green_c="${FG[107]}"
 
-time_="${brace_c}"["${time_c}%t${brace_c}"]"%{$reset_color%}"
-user_host_dir_="${brace_c}"["${userhost_c}%n@%m%{$reset_color%}:${dir_c}%~${brace_c}"]"%{$reset_color%}"
-git_="\$(git_prompt_info) ${git_tag_c}\$(git_current_tag) ${git_ahead_c}\$(git_commits_ahead_of_tag)%{$reset_color%}"
+PROMPT_GIT_DIRTY="${red_c}✗"
+PROMPT_GIT_CLEAN="${green_c}✔"
+
+time_="${blue_c}"["${green_c}%t${blue_c}"]"%{$reset_c%}"
+user_host_dir_="${blue_c}"["${light_blue_c}%n@%m%{$reset_c%}:${light_green_c}%~${blue_c}"]"%{$reset_c%}"
+git_=$(git_is_repo || echo "${green_c}\$(git_current_branch) \$(git_working_tree_status) ${yellow_c}\$(git_current_tag) ${red_c}\$(git_commits_ahead_of_tag)%{$reset_c%}")
 PROMPT="${time_} ${user_host_dir_} ${git_}
 $ "
