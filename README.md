@@ -17,6 +17,10 @@ The current themes are:
 + loki16.omz.zsh-theme (for 16 color terminals)
 + loki-old.omz.zsh-theme (the old v1.0.0 theme which had color issues)
 
-If you decide to use lok-old, be aware that the color settings are unlikely to match those in the image above. There were set to some odd values due to my custom urxvt color settings in arch. You can find the color settings in my [old Xresources/urxvt file](https://github.com/subtlepseudonym/dotfiles/blob/53e0ac6d91b79e5987ff44be3de575013b9c2ae8/Xresources/Xresources.d/urxvt).
+### Versioning ###
+
+The versioning of this repo is used strictly to indicate the state of / changes to `loki.zsh-theme`. All other themes are included for either historical or compatibility reasons and are not considered part of the "public API" for versioning changes.
+
+If you decide to use loki-old, be aware that the color settings are unlikely to match those in the image above. There were set to some odd values due to my custom urxvt color settings in arch. You can find the color settings in my [old Xresources/urxvt file](https://github.com/subtlepseudonym/dotfiles/blob/53e0ac6d91b79e5987ff44be3de575013b9c2ae8/Xresources/Xresources.d/urxvt).
 
 Enjoy
