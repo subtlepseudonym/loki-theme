@@ -9,12 +9,14 @@ This theme is designed to make keeping track of git project versions / progress 
 I've provided an install script `install.sh` for convenience, which copies all files in this repo matching `*.zsh*` to `$HOME/.oh-my-zsh/custom` or `$HOME/.dotfiles/themes` if they exist.
 If your oh-my-zsh is installed elsewhere, just put the contents of this repo into your oh-my-zsh custom folder.
 
+### Themes ###
+
 The theme files in the themes/ directory are marked with file extensions to indicate which require oh-my-zsh like so: `name.omz.zsh-theme`. The non-omz themes should work regardless of whether oh-my-zsh is installed.
 The current themes are:
 + loki.zsh-theme  (for 256 color terminals)
 + loki16.omz.zsh-theme (for 16 color terminals)
 + loki-old.omz.zsh-theme (the old v1.0.0 theme which had color issues)
 
-If you decide to use loki-old, you may need to change the colors of your terminal around to make it more palatable because my home setup (for which this was created) has some odd color settings. You can find my color settings for urxvt and xterm in <a href="https://github.com/subtlepseudonym/dotfiles/tree/master/Xresources/.Xresources.d">dotfiles</a>, which may help.
+If you decide to use lok-old, be aware that the color settings are unlikely to match those in the image above. There were set to some odd values due to my custom urxvt color settings in arch. You can find the color settings in my [old Xresources/urxvt file](https://github.com/subtlepseudonym/dotfiles/blob/53e0ac6d91b79e5987ff44be3de575013b9c2ae8/Xresources/Xresources.d/urxvt).
 
 Enjoy
