@@ -1,4 +1,4 @@
-# LOKI 8-bit color - custom zsh theme based upon aussiegeek and crunch for 8-bit color terminals
+# LOKI 16-bit color - custom zsh theme based upon aussiegeek and crunch for 16-bit color terminals
 
 # colors referenced below (denoted by _c suffix) can be looked up here:
 #  https://misc.flogisoft.com/bash/tip_colors_and_formatting
